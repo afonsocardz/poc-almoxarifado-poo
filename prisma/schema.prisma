@@ -10,3 +10,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Product {
+  id Int @id @default(autoincrement())
+  name String
+  quantity Int
+  
+  @@map("products")
+}
