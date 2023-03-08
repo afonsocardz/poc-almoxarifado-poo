@@ -1,8 +1,11 @@
 import { Router } from "express";
-import { createCategory, getAllCategory } from "./index.routes";
+import { createCategory, deleteCategory, getAllCategory } from "./index.routes";
 
 const categoryRouter = Router();
 
-categoryRouter.post("/", createCategory).get("/", getAllCategory);
+categoryRouter
+  .post("/", createCategory)
+  .get("/", getAllCategory)
+  .delete("/", deleteCategory);
 
 export default categoryRouter;
